@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perayaan Syukur Usia - Fadlan</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Ruthie&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* (SEMUA CSS SEBELUMNYA TETAP SAMA KECUALI BAGIAN IMAGE) */
+
+      /* ======================================= */
+      /* BASIC CSS & TEMA ROMANTIS (PINK) */
+      /* ======================================= */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff6e8;
+        color: #333;
+        text-align: center;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        position: relative;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #8b4513;
+        font-family: "Georgia", serif;
+      }
+      .header h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: 3em;
+        margin-bottom: 5px;
+        color: #a0522d;
+        line-height: 1.2;
+      }
+      .intro-text {
+        font-family: "Ruthie", cursive;
+        font-size: 1.8em;
+        color: #7a3b3b;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        font-weight: normal;
+      }
+
+      /* PERBAIKAN CSS UNTUK JADWAL (RAPIH) */
+      .event-group {
+        max-width: 350px;
+        margin: 20px auto 10px auto;
+        padding: 10px;
+      }
+      .event-detail {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 8px 0;
+        font-size: 1.1em;
+      }
+      .event-icon {
+        font-size: 1.5em;
+        margin-right: 15px;
+        width: 30px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .event-label {
+        font-weight: bold;
+        width: 80px;
+        text-align: left;
+        flex-shrink: 0;
+      }
+      .event-value {
+        font-weight: normal;
+        text-align: left;
+      }
+
+      /* ======================================= */
+      /* CSS KHUSUS UNTUK GALERI FOTO (BARU) */
+      /* ======================================= */
+      .image-container {
+        /* Mengubah perataan menjadi rata tengah */
+        text-align: center;
+        margin: 20px auto 0 auto;
+        /* Memperlebar kontainer agar foto bisa lebih besar */
+        max-width: 500px;
+      }
+      .image-row {
+        display: flex;
+        /* Meratakan foto di tengah baris */
+        justify-content: center;
+        margin-bottom: 15px; /* Jarak antara baris gambar */
+        gap: 15px; /* Jarak horizontal antara gambar */
+      }
+      .photo-frame {
+        /* Container untuk setiap foto, ukuran diperbesar */
+        width: 180px;
+        height: 140px;
+        background-color: #fff;
+        border: 3px solid #d2b48c; /* Bingkai cokelat */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+        /* Animasi Zoom */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      }
+
+      /* Efek Zoom */
+      .photo-frame:hover,
+      .photo-frame:focus {
+        transform: scale(1.08); /* Zoom in 8% */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Memastikan gambar mengisi bingkai tanpa terdistorsi */
+        display: block;
+      }
+
+      /* ======================================= */
+      /* CSS KHUSUS UNTUK FORM UCAPAN */
+      /* ======================================= */
+      .ucapan-form input[type="text"],
+      .ucapan-form textarea,
+      .ucapan-form select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 1em;
+        text-align: center;
+      }
+
+      .ucapan-form select {
+        height: 40px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4L146.2%20207.9%205.4%2069.4c-6.2-6.3-16.4-6.3-22.6%200s-6.3%2016.4%200%2022.6l140.7%20140.7c3.1%203.1%207.2%204.7%2011.3%204.7s8.2-1.6%2011.3-4.7l140.7-140.7c6.2-6.3%206.2-16.4%200-22.6-6.3-6.2-16.4-6.2-22.6%200z%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+        background-size: 12px auto;
+        padding-right: 30px;
+        text-align-last: center;
+      }
+
+      .ucapan-form button {
+        padding: 12px 30px;
+        background-color: #8b4513;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 1.1em;
+        transition: background-color 0.3s;
+      }
+
+      .ucapan-form button:hover {
+        background-color: #a0522d;
+      }
+
+      .ucapan-list {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px dashed #ccc;
+      }
+
+      /* (CSS PITA, BALON, DLL. TETAP SAMA) */
+
+      .ribbon-top-left,
+      .ribbon-bottom-right {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #d2b48c;
+        border-radius: 5px;
+        z-index: 2;
+        overflow: hidden;
+      }
+      .ribbon-top-left {
+        top: -15px;
+        left: -15px;
+        transform: rotate(-45deg);
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+      .ribbon-top-left:before {
+        content: "🎂";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        font-size: 2.5em;
+        color: #fff;
+      }
+
+      .ribbon-bottom-right {
+        bottom: -15px;
+        right: -15px;
+        transform: rotate(135deg);
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+      .ribbon-bottom-right:before {
+        content: "🎁";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-135deg);
+        font-size: 2.5em;
+        color: #fff;
+      }
+
+      .doa-quran .arabic-container {
+        position: relative;
+        padding-left: 10px;
+      }
+      .doa-quran .arabic-container:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: #d2b48c;
+        border-radius: 5px;
+      }
+      .doa-quran .arabic-text {
+        font-family: "Times New Roman", serif;
+        font-size: 1.5em;
+        direction: rtl;
+        text-align: justify;
+        line-height: 2.5;
+        margin: 20px 0;
+      }
+      .doa-quran .arabic-text p {
+        margin: 0;
+        text-align: right;
+        line-height: 1.8;
+        padding-right: 15px;
+      }
+      .doa-quran p {
+        font-style: italic;
+      }
+      .couple-info table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+      }
+      .couple-info th,
+      .couple-info td {
+        padding: 10px;
+        text-align: center;
+      }
+      .countdown-timer div {
+        font-size: 2em;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px;
+        background-color: #f0e68c;
+        border-radius: 5px;
+        color: #333;
+      }
+      .maps-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #a0522d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+      .pop-up-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .pop-up-element.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        text-align: center;
+      }
+      .purple-box {
+        background-color: #800080;
+        color: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        max-width: 90%;
+        z-index: 5;
+      }
+      .purple-box h1 {
+        color: #ffd700;
+        font-size: 1.8em;
+      }
+      .purple-box p {
+        margin: 0 0 10px 0;
+      }
+      #open-button {
+        padding: 15px 30px;
+        background-color: #d2b48c;
+        color: #333;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2em;
+        margin-top: 20px;
+        border-radius: 50px;
+        z-index: 10;
+      }
+      @keyframes fly {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .balloon {
+        position: absolute;
+        width: 40px;
+        height: 60px;
+        background: rgba(255, 192, 203, 0.7);
+        border-radius: 50%;
+        box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.1);
+        animation-name: fly;
+        animation-timing-function: linear;
+        z-index: 1;
+      }
+      .balloon:before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid rgba(255, 192, 203, 0.7);
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+      .balloon:nth-child(1) {
+        left: 5%;
+        animation-duration: 12s;
+        animation-delay: 0s;
+      }
+      .balloon:nth-child(2) {
+        left: 90%;
+        animation-duration: 15s;
+        animation-delay: 2s;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .balloon:nth-child(3) {
+        left: 15%;
+        animation-duration: 10s;
+        animation-delay: 5s;
+      }
+      .balloon:nth-child(4) {
+        left: 80%;
+        animation-duration: 18s;
+        animation-delay: 7s;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .balloon:nth-child(5) {
+        left: 25%;
+        animation-duration: 11s;
+        animation-delay: 3s;
+      }
+      .balloon:nth-child(6) {
+        left: 70%;
+        animation-duration: 14s;
+        animation-delay: 6s;
+      }
+      .balloon:nth-child(7) {
+        left: 35%;
+        animation-duration: 13s;
+        animation-delay: 1s;
+        background: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="splash-screen">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+
+      <div class="purple-box">
+        <p>Kepada Yth. Bapak/Ibu/Sdr/i</p>
+        <h1>[Nama Penerima Undangan]</h1>
+        <h3 style="margin-bottom: 30px; color: white">Anda Diundang</h3>
+        <button id="open-button">Buka Undangan Romantis Kami</button>
+      </div>
+    </div>
+
+    <audio id="background-music" loop>
+      <source
+        src="Jamrud - Selamat Ulang Tahun (Official Lyric Video).mp3"
+        type="audio/mp3"
+      />
+      Maaf, browser Anda tidak mendukung pemutaran audio.
+    </audio>
+
+    <div class="container" id="main-content" style="display: none">
+      <header class="section header pop-up-element">
+        <h1>Syukur atas Nikmat Usia</h1>
+      </header>
+
+      <section class="section couple-info pop-up-element">
+        <div class="ribbon-top-left"></div>
+        <div class="ribbon-bottom-right"></div>
+
+        <p class="intro-text">
+          Doa dan kasih sayang keluarga adalah anugerah terindah yang Allah
+          berikan
+        </p>
+
+        <table>
+          <tr>
+            <td
+              colspan="2"
+              style="
+                font-weight: bold;
+                font-size: 1.5em;
+                color: #8b4513;
+                padding-bottom: 15px;
+              "
+            >
+              Untukmu yang Terkasih
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 20px">
+              Semoga setiap langkah di usia baru ini dipenuhi berkah dan
+              kebahagiaan. Jadikan hari-harimu panggung inspirasi, wujudkan
+              mimpi, dan teruslah menjadi cahaya bagi sekitar.
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="font-style: italic; color: #666">
+              "Setiap tahun adalah lembaran baru, ukirlah kisah terindahmu."
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="section doa-quran pop-up-element">
+        <h3>Untaian Doa (Al-Fatihah)</h3>
+
+        <div class="arabic-container">
+          <div class="arabic-text">
+            <p>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+            <p>ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</p>
+            <p>ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+            <p>مَٰلِكِ يَوْمِ ٱلدِّينِ</p>
+            <p>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</p>
+            <p>ٱهْدِنَا ٱلصِّرَٰطَ ٱٱلْمُسْتَقِيمَ</p>
+            <p>
+              صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ
+              عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ
+            </p>
+          </div>
+        </div>
+
+        <p>
+          (Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang.
+          Segala puji bagi Allah, Tuhan seluruh alam. Yang Maha Pengasih, Maha
+          Penyayang. Pemilik hari Pembalasan. Hanya kepada Engkaulah kami
+          menyembah dan hanya kepada Engkaulah kami mohon pertolongan.
+          Tunjukilah kami jalan yang lurus, (yaitu) jalan orang-orang yang telah
+          Engkau beri nikmat kepadanya; bukan (jalan) mereka yang dimurkai, dan
+          bukan (pula jalan) mereka yang sesat.)
+        </p>
+      </section>
+
+      <section class="section pop-up-element">
+        <h3>Hitung Mundur Menuju Hari Bahagia</h3>
+        <div class="countdown-timer" id="countdown"></div>
+      </section>
+
+      <section class="section pop-up-element">
+        <h3>Perayaan Bersama</h3>
+
+        <h4>Acara Syukuran</h4>
+
+        <div class="event-group">
+          <div class="event-detail">
+            <span class="event-icon">📅</span>
+            <span class="event-label">Hari :</span>
+            <span class="event-value">Rabu</span>
+          </div>
+
+          <div class="event-detail">
+            <span class="event-icon">☀️</span>
+            <span class="event-label">Tanggal :</span>
+            <span class="event-value">15 Oktober 2025</span>
+          </div>
+
+          <div class="event-detail">
+            <span class="event-icon">⏰</span>
+            <span class="event-label">Pukul :</span>
+            <span class="event-value">15.00 WIB</span>
+          </div>
+
+          <div class="event-detail">
+            <span class="event-icon">🏠</span>
+            <span class="event-label">Tempat :</span>
+            <span class="event-value">SMK Media Informatika</span>
+          </div>
+        </div>
+
+        <a
+          href="https://maps.app.goo.gl/sk2nvKYPibdQbLwx5"
+          class="maps-button"
+          target="_blank"
+          >Lihat Peta Lokasi</a
+        >
+      </section>
+
+      <section
+        class="section pop-up-element"
+        style="padding-top: 20px; padding-bottom: 20px"
+      >
+        <div class="image-container">
+          <div class="image-row">
+            <div class="photo-frame" tabindex="0">
+              <img src="img/kueulangtahun.jpg" alt="Foto 1" />
+            </div>
+            <div class="photo-frame" tabindex="0">
+              <img src="img/niuplilin.jpeg" alt="Foto 2" />
+            </div>
+          </div>
+          <div class="image-row">
+            <div class="photo-frame" tabindex="0">
+              <img src="img/kado.jpeg" alt="Foto 3" />
+            </div>
+            <div class="photo-frame" tabindex="0">
+              <img src="img/balon.jpeg" alt="Foto 4" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section pop-up-element">
+        <h3>Kiriman Doa & Ucapan</h3>
+        <form class="ucapan-form" onsubmit="submitUcapan(event)">
+          <input
+            type="text"
+            id="nama-ucapan"
+            placeholder="Nama Anda"
+            required
+          />
+          <textarea
+            id="teks-ucapan"
+            rows="4"
+            placeholder="Tuliskan Doa & Ucapan Anda..."
+            required
+          ></textarea>
+          <select id="konfirmasi-hadir">
+            <option value="" disabled selected>Konfirmasi Kehadiran</option>
+            <option value="hadir">Ya, saya akan hadir (InsyaAllah)</option>
+            <option value="berhalangan">Maaf, saya berhalangan</option>
+          </select>
+          <button type="submit">Kirim Doa</button>
+        </form>
+
+        <div class="ucapan-list">
+          <h4>Untaian Doa dari Tamu:</h4>
+          <div id="ucapan-container"></div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const splashScreen = document.getElementById("splash-screen");
+        const openButton = document.getElementById("open-button");
+        const mainContent = document.getElementById("main-content");
+        const backgroundMusic = document.getElementById("background-music");
+
+        openButton.addEventListener("click", () => {
+          splashScreen.style.display = "none";
+          mainContent.style.display = "block";
+          backgroundMusic.play().catch((error) => {
+            console.log(
+              "Autoplay diblokir. Musik akan dimulai saat interaksi berikutnya."
+            );
+          });
+        });
+
+        // Target tanggal di masa depan
+        const targetDate = new Date("Oct 20, 2025 15:00:00").getTime();
+        const countdownEl = document.getElementById("countdown");
+
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          if (distance > 0) {
+            countdownEl.innerHTML = `
+                        <div>${days}<br><small>Hari</small></div>
+                        <div>${hours}<br><small>Jam</small></div>
+                        <div>${minutes}<br><small>Menit</small></div>
+                        <div>${seconds}<br><small>Detik</small></div>
+                    `;
+          } else {
+            clearInterval(interval);
+            countdownEl.innerHTML = "<h3>Perayaan Telah Dimulai!</h3>";
+          }
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        const popUpElements = document.querySelectorAll(".pop-up-element");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        popUpElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        const ucapanContainer = document.getElementById("ucapan-container");
+
+        function submitUcapan(event) {
+          event.preventDefault();
+
+          const nama = document.getElementById("nama-ucapan").value;
+          const teks = document.getElementById("teks-ucapan").value;
+          const hadir = document.getElementById("konfirmasi-hadir").value;
+
+          if (hadir === "") {
+            alert("Mohon pilih Konfirmasi Kehadiran terlebih dahulu.");
+            return;
+          }
+
+          const newUcapan = document.createElement("div");
+          newUcapan.classList.add("ucapan-item", "pop-up-element");
+
+          let hadirStatus =
+            hadir === "hadir"
+              ? '<span style="color: green;">(Konfirmasi Hadir)</span>'
+              : '<span style="color: red;">(Berhalangan Hadir)</span>';
+
+          newUcapan.innerHTML = `
+                    <p><strong>${nama}</strong> ${hadirStatus}</p>
+                    <p style="font-style: italic;">"${teks}"</p>
+                `;
+
+          ucapanContainer.prepend(newUcapan);
+
+          setTimeout(() => {
+            newUcapan.classList.add("visible");
+          }, 100);
+
+          document.querySelector(".ucapan-form").reset();
+          alert("Ucapan dan konfirmasi kehadiran Anda telah tersampaikan!");
+        }
+        window.submitUcapan = submitUcapan;
+      });
+    </script>
+  </body>
+</html>
